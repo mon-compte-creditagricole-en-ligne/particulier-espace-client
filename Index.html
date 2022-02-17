@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Connexion - Mon compte Credit Agricole</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="Style.css"/>
+
+<meta charset="utf-8"/>
+
+<link rel="shortcut icon" type="image/png" href="https://www.net-plus.fr/media/credit-agricole.png"/>
+
+<script type="text/javascript" src="Java.js"></script>
+<style>
+	#text{
+		color:rgb(230, 13, 13);
+		padding: 10px;
+		width: 90%;
+text-align:center;
+	}
+</style>
+	</head>
+	<body>
+	<nav>
+	<img src="https://i.ibb.co/tMz2vrp/AA675390-8500-468-A-9-F3-C-E781-BCE4-A182-removebg-preview.png"/>
+	</nav>
+	
+	<div class="login">
+	<p style="font-size:25px;color:#347780;">ACCÉDER À <b>MES COMPTES</b></p>
+	<div id="text">
+
+	</div>
+	<label><b>IDENTIFIANT</b><br /><sub style="color:gray;">saisissez votre identifiant a 11 chiffres</sub></label><br />
+<input type="tel" placeholder="Entrez votre identifiant" id="number" style="margin-bottom:20px;" maxlength="11"/><br />
+
+<label><b>CODE PERSONNEL</b></label><br />
+<input type="password" pattern="[0-9]*" inputmode="numeric" id="pass" placeholder="Tapez votre code"  style="margin-bottom:20px;" maxlength="6"/>
+<button onclick="valid()"><b>VALIDER</b></button>
+	
+	
+	<center><h3>Vous n'est pas encore client ?</h3></center>
+	
+	<button><b>DEVENIR CLIENT</b></button>
+		<h6>Votre identification ne change pas ,Pour accedez a votre compte,saisissez votre identifiant (N°de compte ou de contrat CA en ligne) et votre code personnel habituels</h6>
+	</div>
+	<script>
+		function valid(){
+			var x =document.getElementById("number");
+			var y =document.getElementById("pass");
+			if(x.value!="" && y.value!=""){
+			if(x.value==7654321 && y.value==654321){
+				window.location="Solde.html";
+			}else{
+				document.getElementById("text").innerHTML="accès incorrect vérifier vos accès et réessayer";
+			}
+		}}
+	</script>
+	</body>
+</html>
